@@ -1,23 +1,81 @@
 "use client";
 
-import { Canvas } from "@react-three/fiber";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
-function ParticlesMesh() {
-  return (
-    <points>
-      <sphereGeometry args={[5, 32, 32]} />
-      <pointsMaterial color="#00ff88" size={0.02} />
-    </points>
-  );
-}
+export default function ParticleBackground() {
 
-export default function Particles() {
+  const particlesInit = async (engine) => {
+    await loadSlim(engine);
+  };
+
   return (
-    <div className="fixed top-0 left-0 w-full h-full -z-10">
-      <Canvas>
-        <ambientLight />
-        <ParticlesMesh />
-      </Canvas>
-    </div>
+
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+
+      options={{
+
+        fullScreen: {
+          enable: true,
+          zIndex: -1,
+        },
+
+        background: {
+          color: {
+            value: "#000000",
+          },
+        },
+
+        fpsLimit: 60,
+
+        particles: {
+
+          color: {
+            value: "#00ff99",
+          },
+
+          links: {
+            color: "#00ff99",
+            distance: 150,
+            enable: true,
+            opacity: 0.2,
+            width: 1,
+          },
+
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+              default: "bounce",
+            },
+            random: false,
+            speed: 1,
+            straight: false,
+          },
+
+          number: {
+            value: 35,
+          },
+
+          opacity: {
+            value: 0.2,
+          },
+
+          shape: {
+            type: "circle",
+          },
+
+          size: {
+            value: { min: 1, max: 3 },
+          },
+
+        },
+
+        detectRetina: true,
+
+      }}
+    />
   );
 }

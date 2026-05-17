@@ -4,63 +4,49 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Float } from "@react-three/drei";
 import { useRef } from "react";
 
-function Shield() {
+function Shape() {
 
   const mesh = useRef();
 
-  useFrame((state) => {
-
-    if (!mesh.current) return;
-
-    mesh.current.rotation.y += 0.005;
-
-    mesh.current.position.y =
-      Math.sin(state.clock.elapsedTime) * 0.2;
-
-    mesh.current.rotation.x =
-      state.mouse.y * 0.5;
-
-    mesh.current.rotation.y =
-      state.mouse.x * 1.5;
-
+  useFrame(() => {
+    mesh.current.rotation.x += 0.003;
+    mesh.current.rotation.y += 0.003;
   });
 
   return (
-    <mesh ref={mesh}>
+    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
 
-      <icosahedronGeometry args={[2, 1]} />
+      <mesh ref={mesh}>
 
-      <meshStandardMaterial
-        color="#00ff88"
-        wireframe
-      />
+        <icosahedronGeometry args={[2, 1]} />
 
-    </mesh>
+        <meshStandardMaterial
+          color="#00ff99"
+          wireframe
+        />
+
+      </mesh>
+
+    </Float>
   );
 }
 
 export default function Hero3D() {
 
   return (
-    <Canvas camera={{ position: [0, 0, 6] }}>
 
-      <ambientLight intensity={1.5} />
+    <Canvas
+      camera={{ position: [0, 0, 5] }}
+      dpr={[1, 1.5]}
+    >
 
-      <directionalLight
-        position={[5, 5, 5]}
-        intensity={2}
-      />
+      <ambientLight intensity={1} />
 
-      <Float
-        speed={2}
-        rotationIntensity={1}
-        floatIntensity={2}
-      >
+      <directionalLight position={[2, 2, 5]} />
 
-        <Shield />
-
-      </Float>
+      <Shape />
 
     </Canvas>
+
   );
 }
