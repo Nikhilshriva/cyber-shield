@@ -51,6 +51,11 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.100.10.tgz#aeb34d301fd4ff9762e67dfa018adc33b7a18be4"
   integrity sha512-8UR0yJR+GiQ40m3lPhUr0xbfAupe6GSQiksSBSa9SM2NjezFyxXCIA69/lz8cSoNKZLrw1/PktIyQBJcVeMi3w==
 
+"@tsparticles/engine@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@tsparticles/engine/-/engine-4.0.5.tgz#deb90927c43018a82a1a9e10be36c35400b2a43b"
+  integrity sha512-ovFQNzz18Ef0ww7wPqykHWU06K1EhTkMPZhoIZQQaRbFmKKoE+5LyTGGTZGzGjQ4GjHLZq7l9kGl1oInpzoK4Q==
+
 dequal@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/dequal/-/dequal-2.0.3.tgz#2644214f1997d39ed0ee0ece72335490a7ac67be"
