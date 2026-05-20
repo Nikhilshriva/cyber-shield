@@ -7,32 +7,32 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Lenis from "lenis";
 
-import Hero3D from "../components/Hero3D";
-import Features from "../components/Features";
-import Pricing from "../components/Pricing";
-import Testimonials from "../components/Testimonials";
-import Stats from "../components/Stats";
+import Hero3D from "../clerk-nextjs/components/Hero3D";
+import Features from "../clerk-nextjs/components/Features";
+import Pricing from "../clerk-nextjs/components/Pricing";
+import Testimonials from "../clerk-nextjs/components/Testimonials";
+import Stats from "../clerk-nextjs/components/Stats";
 
-import Cursor from "../components/Cursor";
-import Navbar from "../components/Navbar";
-import Particles from "../components/Particles";
-import ThemeToggle from "../components/ThemeToggle";
+import Cursor from "../clerk-nextjs/components/Cursor";
+import Navbar from "../clerk-nextjs/components/Navbar";
+import Particles from "../clerk-nextjs/components/Particles";
+import ThemeToggle from "../clerk-nextjs/components/ThemeToggle";
 
-import StorySection from "../components/StorySection";
-import AdvancedFeatures from "../components/AdvancedFeatures";
-import Glow from "../components/Glow";
+import StorySection from "../clerk-nextjs/components/StorySection";
+import AdvancedFeatures from "../clerk-nextjs/components/AdvancedFeatures";
+import Glow from "../clerk-nextjs/components/Glow";
 
-import SecuritySection from "../components/SecuritySection";
-import TrustBadges from "../components/TrustBadges";
-import FloatingCTA from "../components/FloatingCTA";
+import SecuritySection from "../clerk-nextjs/components/SecuritySection";
+import TrustBadges from "../clerk-nextjs/components/TrustBadges";
+import FloatingCTA from "../clerk-nextjs/components/FloatingCTA";
 
-import GridBackground from "../components/GridBackground";
-import LiveTicker from "../components/LiveTicker";
+import GridBackground from "../clerk-nextjs/components/GridBackground";
+import LiveTicker from "../clerk-nextjs/components/LiveTicker";
 
-import AIChatbot from "../components/AIChatbot";
-import DashboardPreview from "../components/DashboardPreview";
+import AIChatbot from "../clerk-nextjs/components/AIChatbot";
+import DashboardPreview from "../clerk-nextjs/components/DashboardPreview";
 
-import MotionSection from "../components/MotionSection";
+import MotionSection from "../clerk-nextjs/components/MotionSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
